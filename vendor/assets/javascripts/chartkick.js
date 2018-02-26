@@ -580,6 +580,7 @@ function callAdapter(chartType, chart) {
     console.log(adapterName);
     console.log(adapter.name);
     console.log(adapter[fnName]);
+    console.log(fnName);
     if ((!adapterName || adapterName === adapter.name) && (0, _helpers.isFunction)(adapter[fnName])) {
       chart.adapter = adapter.name;
       return adapter[fnName](chart);
