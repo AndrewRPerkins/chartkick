@@ -573,14 +573,8 @@ function callAdapter(chartType, chart) {
 
   loadAdapters();
 
-  console.log(adapters);
   for (i = 0; i < adapters.length; i++) {
     adapter = adapters[i];
-    console.log(adapter);
-    console.log(adapterName);
-    console.log(adapter.name);
-    console.log(adapter[fnName]);
-    console.log(fnName);
     if ((!adapterName || adapterName === adapter.name) && (0, _helpers.isFunction)(adapter[fnName])) {
       chart.adapter = adapter.name;
       return adapter[fnName](chart);
@@ -838,7 +832,7 @@ var Chart = function () {
     key: "__render",
     value: function __render() {
       this.data = this.__processData();
-      renderChart(this.constructor.name, this);
+      renderChart('ColumnChart', this);
     }
   }]);
 
